@@ -1,0 +1,15 @@
+server:
+  port: 8761
+spring:
+  profiles:
+    active: eureka1
+eureka:
+  instance:
+    #主机名
+    hostname: eureka1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      #将自己注册到eureka2
+      defaultZone: http://eureka2:8762/
