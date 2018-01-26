@@ -1,0 +1,23 @@
+server:
+  port: 8800
+
+#spring.profiles.active=native提供本地存储配置
+#也可以通过spring.cloud.config.server.native.searchLocations=file:F:/properties/属性来指定配置文件的位置
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.coding.net/xjp-dream/configure-center.git
+#          search-paths:
+#          - cloud-config-repo
+          username: xjpdyx@hotmail.com
+          password: xjpdyx32.
+#不开启安全验证，否则访问/bus/refresh返回401
+management:
+  security:
+    enabled: false
+

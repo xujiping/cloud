@@ -8,8 +8,6 @@ eureka:
     #主机名
     hostname: eureka2
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
       #将自己注册到eureka1
-      defaultZone: http://eureka1:8761/
+      defaultZone: http://eureka1:8761/eureka/
