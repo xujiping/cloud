@@ -16,8 +16,7 @@ spring:
 #          - cloud-config-repo
           username: xjpdyx@hotmail.com
           password: xjpdyx32.
-#不开启安全验证，否则访问/bus/refresh返回401
-management:
-  security:
-    enabled: false
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
